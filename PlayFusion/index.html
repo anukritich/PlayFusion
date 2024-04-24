@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Playfusion</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffdce0; /* Light pastel pink */
+            margin: 0;
+            padding: 0;
+            position: relative; /* Ensure proper stacking of elements */
+            min-height: 100vh; /* Make sure the content area is at least the height of the viewport */
+            overflow-y: auto; /* Add vertical scrollbar */
+        }
+
+        .logo {
+            /* position: relative; */
+            top: 10px;
+            left: 10px;
+            z-index: 1; /* Ensure the logo is above other elements */
+        }
+        .logo img {
+            width: 200px; /* Adjust the size as needed */
+            height: auto;
+        }
+
+        .header {
+            background-color: #d1ecf1; /* Light pastel blue */
+            padding: 10px;
+            margin-top: 20px; /* Add space between logo and header */
+        }
+
+        h1 {
+            color: #6c757d; /* Medium gray */
+        }
+
+        nav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0d6efd; /* Blue */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f8c8d9; /* Light pink */
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: white; /* White on hover */
+            color: #f8c8d9; /* Light pink text on hover */
+        }
+
+        p {
+            color: #212529; /* Dark gray */
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #f7b2c2; /* Slightly darker shade of pink */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .search-box {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            background-color: rgba(135, 206, 235, 0.5); /* Transparent sky blue */
+            color: white; /* White text */
+            font-size: 16px;
+        }
+
+        .search-box::placeholder {
+            color: white; /* White placeholder text */
+        }
+
+        
+
+        .game-link {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px; /* Adjust the width as needed */
+            margin-right: 20px; /* Add spacing between games */
+            margin-bottom: 20px; /* Add spacing below games */
+            text-align: center;
+            transition: transform 0.2s; /* Add transition for smooth hover effect */
+            margin-top: 20px; /* Add margin to the top */
+        }
+
+        .game-link:hover {
+            transform: scale(1.1); /* Scale up on hover */
+        }
+
+        .game-link img {
+            width: 100px; /* Adjust the size as needed */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+
+        .main-banner {
+            background-image: url(img/banner-bg.jpg);
+            background-position: center center;
+            background-size: cover;
+            min-height: 380px;
+            border-radius: 23px;
+            padding: 80px 60px;
+            .header-txt {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        }
+        .main-banner h6 {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 25px;
+            
+        }
+
+        .main-banner h4 {
+            font-size: 45px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .main-banner h4 em {
+            font-style: normal;
+            color: #ec6090;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color: #fff;
+            font-weight: 700;}
+          .img{
+            border-radius: 20px;
+          }  
+          /* 
+---------------------------------------------
+Most Popular Style
+--------------------------------------------- 
+*/
+
+            .most-popular {
+            margin-top: 60px;
+            padding: 30px;
+            background-color: #1f2122;
+            border-radius: 23px;
+            }
+
+            .most-popular .item {
+            background-color: #27292a;
+            padding: 30px 15px;
+            border-radius: 23px;
+            margin-bottom: 30px;
+            }
+
+            .most-popular .item .item {
+            padding: 0px;
+            border-radius: 0px;
+            background-color: transparent;
+            margin-bottom: 0px;
+            }
+
+            .most-popular .item img {
+            border-radius: 23px;
+            }
+
+            .most-popular .item h4 {
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            display: inline-block;
+            }
+
+            .most-popular .item span {
+            color: #666;
+            display: block;
+            margin-top: 7px;
+            font-weight: 400;
+            }
+
+            .most-popular .item ul {
+            float: right;
+            margin-top: 20px;
+            }
+
+            .most-popular .item ul li {
+            text-align: right;
+            color: #fff;
+            font-size: 14px;
+            }
+
+            .most-popular .item ul li:first-child i {
+            color: yellow;
+            }
+
+            .most-popular .item ul li:last-child i {
+            color: #ec6090;
+            }
+
+            .most-popular .main-button {
+            text-align: center;
+            margin-bottom: -53px;
+            }
+
+        
+        
+
+
+    </style>
+</head>
+<body>
+   
+<header>
+    <div class="logo">
+        <img src="img/logo.png" alt="Playfusion Logo">
+    </div>
+      <nav>
+        <ul>
+            <li><a href="profile.html" class="button">Profile</a></li>
+            <li><a href="browse.html" class="button">Browse</a></li>
+            <li><a href="details.html" class = "button">Details</a></li>
+            <li><a href="streams.html"class = "button">Streams</a></li>
+            <li><input type="text" placeholder="Search…" class="search-box"></li>
+        </ul>
+    </nav>
+   </header>
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Banner Start ***** -->
+          <div class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                  <h6>Welcome To Playfusion</h6>
+                  <h4><em>Browse</em> Our  Games Here</h4>
+                  <div class ="header-txt">
+                  <a href="SnakeGame\index.html" class="game-link">
+                    <img src="img/game-1.png" alt="Game 1 Logo">
+                    <p>Snake</p>
+                </a>
+                <a href="TicTacToe/index.html" class="game-link">
+                    <img src="img/game-2.png" alt="Game 2 Logo">
+                    <p>Tic Tac Toe</p>
+                </a>
+                <a href="Tetris/index.html" class="game-link">
+                <img src="img/game-3.png" alt="Game 3 Logo">
+                      
+                    <p>Tetris</p>
+                </a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <div class="most-popular">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>Most Popular</em> Right Now</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-01.jpg" alt="">
+                      <h4>Fortnite<br><span>Sandbox</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-02.jpg" alt="">
+                      <h4>PubG<br><span>Battle S</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-03.jpg" alt="">
+                      <h4>Dota2<br><span>Steam-X</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-04.jpg" alt="">
+                      <h4>CS-GO<br><span>Legendary</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                          <div class="item inner-item">
+                            <img src="assets/images/popular-05.jpg" alt="">
+                            <h4>Mini Craft<br><span>Legendary</span></h4>
+                            <ul>
+                              <li><i class="fa fa-star"></i> 4.8</li>
+                              <li><i class="fa fa-download"></i> 2.3M</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                          <div class="item">
+                            <img src="assets/images/popular-06.jpg" alt="">
+                            <h4>Eagles Fly<br><span>Matrix Games</span></h4>
+                            <ul>
+                              <li><i class="fa fa-star"></i> 4.8</li>
+                              <li><i class="fa fa-download"></i> 2.3M</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-07.jpg" alt="">
+                      <h4>Warface<br><span>Max 3D</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="assets/images/popular-08.jpg" alt="">
+                      <h4>Warcraft<br><span>Legend</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Most Popular End ***** -->
+    
+
+    <footer>
+        &copy; 2024 Playfusion. All rights reserved.
+    </footer>
+
+    <script>
+        // Function to display a message when the user clicks on a navigation link
+        function displayMessage() {
+            alert("This feature is coming soon!");
+        }
+
+        // Add event listeners to navigation links
+        document.addEventListener("DOMContentLoaded", function() {
+            var profileLink = document.querySelector("a[href='profile.html']");
+            var browseLink = document.querySelector("a[href='browse.html']");
+            var streamsLink = document.querySelector("a[href='streams.html']");
+            var detailsLink = document.querySelector("a[href='details.html']");
+
+
+            profileLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                displayMessage();
+            });
+
+            browseLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                displayMessage();
+            });
+            
+            streamsLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                displayMessage();
+            });
+            
+            detailsLink.addEventListener("click", function(event) {
+                event.preventDefault();
+                displayMessage();
+            });
+        });
+    </script>
+</body>
+</html>
