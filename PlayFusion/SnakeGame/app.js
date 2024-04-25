@@ -38,7 +38,7 @@ function update() {
         return;
     }
 
-    context.fillStyle="#0671b7";
+    context.fillStyle="#9bedff";
     context.fillRect(0, 0, board.width, board.height);
 
     context.fillStyle="#fe8895";
