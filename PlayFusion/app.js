@@ -9,3 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+// const video = document.querySelector(".main-banner  video");
+
+// video.addEventListener("mouseenter", () => {
+//  video.play();
+// });
+
+// video.addEventListener("mouseleave", () => {
+//     video.pause();
+// });
